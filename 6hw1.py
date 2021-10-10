@@ -22,7 +22,7 @@ from pympler import asizeof
 from timeit import timeit
 
 
-# 1 Рекурсия vs Цикл                                                MiB
+
 
 @profile
 def decor(func):                                                    # 0
@@ -32,11 +32,11 @@ def decor(func):                                                    # 0
 
 @ decor
 def get_rev_number(number, rev_number = ''):                        # 0
-    # базовый случай!!!
+!
     if number == 0:                                                 # 0
         return rev_number                                           # 0
     else:
-        # шаг рекурсии
+
         last_number = number % 10                                   # 0
         rev_number += str(last_number)                              # 0
         return get_rev_number(number // 10, rev_number)             # 0.2
@@ -66,7 +66,7 @@ get_rev_number_2 = 1.012
  что дополнительной Опертивной памяти для хранения Итерации не требуется. 
 '''
 
-# 2 Изменение типа __slots__ в class
+
 
 class HexNumber:
     def __init__(self, num_1,num_2):
